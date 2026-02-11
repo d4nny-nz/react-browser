@@ -43,19 +43,19 @@ const ExtensionList = () => {
         <h1 className=" text-2xl font-bold">Extensions List</h1>
         <div className="flex gap-6">
           <button
-            className={`p-2 ${isActive === "all" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
+            className={`p-2 ${isActive === "all" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} border-0 rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
             onClick={() => setIsActive("all")}
           >
             All
           </button>
           <button
-            className={`p-2 ${isActive === "active" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
+            className={`p-2 ${isActive === "active" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} border-0 rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
             onClick={() => setIsActive("active")}
           >
             Active
           </button>
           <button
-            className={`p-2 ${isActive === "inactive" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
+            className={`p-2 ${isActive === "inactive" ? "bg-secondary-400 text-primary-900" : "bg-primary-700 text-amber-50"} border-0 rounded-2xl px-5 text-sm hover:opacity-70 transition duration-500 ease-in-out`}
             onClick={() => setIsActive("inactive")}
           >
             Inactive
