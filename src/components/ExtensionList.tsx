@@ -37,6 +37,12 @@ const ExtensionList = () => {
     }
   };
 
+  const filteredExtensions = 
+  extensionData?.filter((ext) =>{
+    if (isActive === "all") return true;
+    return isActive === "active" ? ext.isActive === true : ext.isActive === false;
+  }) ?? [];
+
   return (
     <div className="w-full max-w-250 mx-auto mt-6  ">
       <section className="flex items-center justify-between w-full text-white">
@@ -64,7 +70,8 @@ const ExtensionList = () => {
       </section>
       {/* Render List in a grid Container */}
       <section className=" pt-6 grid grid-cols-3 gap-3 ">
-        {extensionData?.map((data, idx) => (
+        
+        {filteredExtensions?.map((data, idx) => (
           <ExtensionCard
             key={idx}
             logo={data.logo}
